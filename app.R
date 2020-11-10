@@ -32,18 +32,18 @@ ui <- fluidPage(
     # metadata for social sharing
     meta() %>%
         meta_social(
-            title = "My Little Crony",
-            description = "An interactive visualization of Tory cronyism during the pandemic",
-            url = "https://sophieehill.shinyapps.io/my-little-crony/",
-            image = "https://www.sophie-e-hill.com/img/crony_preview.png",
+            title = "My Little Loan Crony",
+            description = "An interactive visualization of Tory cronyism related to the Loan Charge Scandal",
+            url = "https://my-little-loan-crony.shinyapps.io/my-little-loan-crony/",
+            image = "https://parris.me.uk/i/lcag.jpg",
             image_alt = "An image for social media cards",
-            twitter_creator = "@sophie_e_hill",
+            twitter_creator = "@garethparris",
             twitter_card_type = "summary",
-            twitter_site = "@sophie_e_hill"
+            twitter_site = "@garethparris"
         ),
     
-    titlePanel("My Little Crony"),
-    verticalLayout(p("A visualization of the connections between", strong("Tory politicians"), "and", strong("companies being awarded government contracts during the pandemic,"), "based on reporting by", a(href="https://www.opendemocracy.net/en/dark-money-investigations/", "openDemocracy,"), a(href="https://bylinetimes.com/", "Byline Times,"), "and more.",
+    titlePanel("My Little Loan Crony"),
+    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, private companies and people related to the Loan Charge Scandal"), ".",
                    style = "font-size:20px;")),
     sidebarLayout(
         sidebarPanel(
@@ -58,14 +58,14 @@ ui <- fluidPage(
         p(HTML("&horbar;"), "political donations", style="color:#76a6e8;font-size:15px"),
         p(HTML("&horbar;"), "other connections (e.g. family, employer)", style="color:grey;font-size:15px"),
         br(),
-        p("Thicker lines indicate more valuable contracts or donations.", style = "font-size:15px;"),
+        p("Thicker lines indicate more valuable donations.", style = "font-size:15px;"),
         hr(),
-        p("Created by", a(href="https://sophie-e-hill.com/", "Sophie E. Hill"),
+        p("My Little Crony originally created by", a(href="https://sophie-e-hill.com/", "Sophie E. Hill"),
           HTML("&bull;"),
          "Code on", a(href="https://github.com/sophieehill/my-little-crony", "Github"),
          HTML("&bull;"), 
           "Follow me on",
-          a(href="https://twitter.com/sophie_e_hill", "Twitter"),
+          a(href="https://twitter.com/garethparris", "Twitter"),
           style="font-size:15px;"), 
         width=3),
         mainPanel(
