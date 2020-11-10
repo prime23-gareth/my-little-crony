@@ -43,7 +43,7 @@ ui <- fluidPage(
         ),
     
     titlePanel("My Little Loan Crony"),
-    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, private companies and people related to the Loan Charge Scandal"), ".",
+    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, private companies and people related to the Loan Charge Scandal."),
                    style = "font-size:20px;")),
     sidebarLayout(
         sidebarPanel(

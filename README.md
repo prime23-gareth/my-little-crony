@@ -1,6 +1,8 @@
 # My Little Loan Crony
 
-This repo contains the data and code for my Shiny App, [My Little Loan Crony](Based on the original My Little Crony https://sophieehill.shinyapps.io/my-little-crony/), visualizing links between Tory politicians, private companies and people related to the Loan Charge Scandal.
+This repo contains the data and code for my Shiny App, [My Little Loan Crony](https://my-little-loan-crony.shinyapps.io/my-little-loan-crony/), visualizing links between Tory politicians, private companies and people related to the Loan Charge Scandal.
+
+My Little Loan Crony is based on the original [My Little Crony](https://sophieehill.shinyapps.io/my-little-crony/) by [Sophie E. Hill](https://www.sophie-e-hill.com/).
 
 ## Data
 The raw data is contained in two files: `people.csv` identifies individuals and organizations (i.e. the "nodes" of the network) and `connections.csv` identifies the links between individuals and organizations (i.e. the "edges" of the network).
