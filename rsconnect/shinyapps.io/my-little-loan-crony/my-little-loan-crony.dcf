@@ -5,6 +5,6 @@ account: my-little-loan-crony
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3205376
-bundleId: 3844782
+bundleId: 3847449
 url: https://my-little-loan-crony.shinyapps.io/my-little-loan-crony/
-when: 1605044498.94403
+when: 1605103536.06633
