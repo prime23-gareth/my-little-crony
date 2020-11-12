@@ -1,17 +1,39 @@
-﻿id,type,desc
+id,type,desc
 Conservative party,political party,The UK Conservative party has been in government since 2010
 Boris Johnson,person,Boris Johnson is the Prime Minister
-Dominic Cummings,person ,Dominic Cummings is chief adviser to the Prime Minister
 David Cameron,person,David Cameron is a former Conservative Prime Minister
-Jesse Norman,person,Jesse Norman is a Conservative MP and government minister
-Matt Hancock,person,Matt Hancock is a Conservative MP and Health Secretary
+Jesse Norman,person,Alexander Jesse Norman is a Conservative MP and government minister serving as Financial Secretary to the Treasury since 2019
 UK government,government,UK government
 Leader's Club,group,"The Leader's Club is an exclusive dining club for donors who give at least £50,000 to the Conservatives"
-Michelle Mone,person,Michelle Mone is a businesswoman and Conservative peer
+Michelle Mone,person,Michelle Mone is a businesswoman and Conservative peer and has used EBTs to avoid tax
 Douglas Barrowman,person,Douglas Barrowman is a Scottish businessman
-Anthony Page,person,Anthony Page is founder of PPE Medpro
+Anthony Page,person,Anthony Page is a Director of Knox House Trustees (UK) Limited
 Lancaster Knox,firm,Lancaster Knox is a high-end tax and accountancy firm
 Knox Group,firm,Knox Group is a group of companies founded by businessman Douglas Barrowman
-Knox House Trust,firm,"Knox House Trust is a corporate wealth and investment management based in the Isle of Man, a tax haven"
+Knox House Trustees (UK) Limited,firm,"Knox House Trust is a corporate wealth and investment management based in the Isle of Man, a tax haven"
 Isle of Man,tax haven,The Isle of Man is regarded as a tax haven
 British Virgin Islands,tax haven,The British Virgin Islands are a tax haven
+Labour Party,political party,The UK Labour Party
+Mel Stride,person,Mel Stride is Chair of the Treasury Select Committee
+Guernsey,tax haven,Guernsey is regarded as a tax haven
+Jersey,tax haven,Jersey is regarded as a tax haven
+Malta,tax haven,Malta is considered by some as a tax haven as it has a number of potential benefits for foreign companies and shareholders.
+James Alexander Heathcote,person,James Alexander Heathcote is a Director of Knox House Trustees (UK) Limited
+Arthur John Lancaster,person,Arthur John Lancaster is a Director of Knox House Trustees (UK) Limited
+Vanquish Options Limited,firm,SCHEME: Vanquish Options Limited is based in the Isle Of Man. Currently being liquidated (November 2020)
+Timothy Clive Eve,person,Timothy Clive Eve was a Director and Company Secretary at Vanquish Options Limited
+Hamilton Trust Limited,firm,SCHEME: Hamilton Trust Limited is based in Guernsey
+K2/Cirrus Contractor Solutions,firm,SCHEME: K2/Cirrus Contractor Solutions is based in Jersey
+Hyrax Resourcing Limited,firm,"SCHEME: Hyrax Resourcing Limited is based in Wales, UK"
+AML Executive PPC Limited,firm,SCHEME: AML Executive PPC Limited was based in the Isle of Man
+119277C Limited,firm,SCHEME: 119277C Limited was based in the Isle of Man
+AML Tax (IOM) Limited,firm,SCHEME: AML Tax (IOM) Limited is based in the Isle of Man
+SmartPay Executive Limited,firm,SCHEME: SmartPay Executive Limited is based in the Isle of Man
+Joanne Marie Macnamara,person,Joanne Marie Macnamara is a director of Hyrax Resourcing Limited
+Peak Performance Professional Contracts Limited,firm,Peak Performance Professional Contracts Limited (3PCL) is an intermediary firm for all Peak related schemes
+David Gill,person,David Gill is a founding director of the Peak related companies
+HM Revenue and Customs,government,HM Revenue and Customs is a non-ministerial department responsible for the collection of taxes
+HM Treasury,government,HM Treasury is the department responsible for developing and executing the government's public finance policy and economic policy
+John Glen,person,Economic Secretary to the Treasury
+Rishi Sunak,person,Chancellor of the Exchequer
+Jim Harra,person,First Permanent Secretary and Chief Executive of HM Revenue and Customs since October 2019
