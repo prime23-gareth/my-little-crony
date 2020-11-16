@@ -69,6 +69,8 @@ ui <- fluidPage(
           HTML("&bull;"),
          "Sophie's code on", a(href="https://github.com/sophieehill/my-little-crony", "Github"),
          HTML("&bull;"), 
+         "This version forked and developed by Gareth",
+         HTML("&bull;"), 
           "Follow me on",
           a(href="https://twitter.com/garethparris", "Twitter"),
           style="font-size:15px;"), 

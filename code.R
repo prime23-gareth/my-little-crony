@@ -8,12 +8,17 @@ library(igraph)
 people <- read_csv("people.csv")
 connections <- read_csv("connections.csv")
 
+# sort people alphabetically so that the selection list is easier to follow
+people <- people[order(people$id),]
 
-# calculate betweeness in order to scale nodes
+# calculate degree cenrality in order to scale nodes
 graph <- igraph::graph.data.frame(connections, directed = F)
 degree_value <- degree(graph, mode = "in")
-people$icon.size <- degree_value[match(people$id, names(degree_value))] + 40
+sort(degree_value)
+# scaling factor 
+people$icon.size <- degree_value[match(people$id, names(degree_value))] + 80
 
+sort(betweenness(graph, v=V(graph), directed=FALSE))
 
 # add attributes
 people$label <- people$id
@@ -45,17 +50,17 @@ people <- people %>% mutate(shape = "icon",
                             icon.face = "FontAwesome",
                             icon.weight = "bold")
 people$title <- paste0("<p>", people$desc,"</p>")
-
+people$font.size <- people$icon.size/2
 
 # connections$label <- connections$type
 connections$title <- paste0("<p>", connections$detail, "</p>")
-# connections$color <- ifelse(connections$type=="contract", "#f77272", "#dbd9db")
-# connections$color <- "#dbd9db"
 # color edges according to type
 connections <- connections %>% mutate(color = case_when(type=="contract" ~ "#f77272",
                                                         type=="donor" ~ "#76a6e8",
                                                         TRUE ~ "#dbd9db"))
 connections$value <- ifelse(is.na(connections$contract_size), 5, connections$contract_size)
+# make sure "value" is saved as an integer variable
+connections$value <- as.integer(as.character(connections$value))
 
 # save datasets to call in Shiny
 save(people, file = "people.RData")
