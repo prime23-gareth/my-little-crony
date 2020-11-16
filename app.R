@@ -32,9 +32,9 @@ ui <- fluidPage(
     # metadata for social sharing
     meta() %>%
         meta_social(
-            title = "My Little Loan Crony",
+            title = "The Loan Rangers",
             description = "An interactive visualization of Tory cronyism related to the Loan Charge Scandal",
-            url = "https://my-little-loan-crony.shinyapps.io/my-little-loan-crony/",
+            url = "https://the-loan-rangers.shinyapps.io/the-loan-rangers/",
             image = "https://parris.me.uk/i/lcag.jpg",
             image_alt = "An image for social media cards",
             twitter_creator = "@garethparris",
@@ -42,8 +42,8 @@ ui <- fluidPage(
             twitter_site = "@garethparris"
         ),
     
-    titlePanel("My Little Loan Crony"),
-    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, private companies and people related to the Loan Charge Scandal."),
+    titlePanel("The Loan Rangers"),
+    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, companies and people related to the Loan Charge Scandal."),
                    style = "font-size:20px;")),
     sidebarLayout(
         sidebarPanel(
@@ -60,9 +60,11 @@ ui <- fluidPage(
         br(),
         p("Thicker lines indicate more valuable donations.", style = "font-size:15px;"),
         hr(),
+        p("THIS IS A WORK IN PROGRESS. You will notice many unconnected nodes. Updates will be happening frequently as we build this web.", style = "font-size:15px;"),
+        hr(),
         p("My Little Crony originally created by", a(href="https://sophie-e-hill.com/", "Sophie E. Hill"),
           HTML("&bull;"),
-         "Code on", a(href="https://github.com/sophieehill/my-little-crony", "Github"),
+         "Sophie's code on", a(href="https://github.com/sophieehill/my-little-crony", "Github"),
          HTML("&bull;"), 
           "Follow me on",
           a(href="https://twitter.com/garethparris", "Twitter"),
@@ -75,5 +77,3 @@ ui <- fluidPage(
 )
 
 shinyApp(ui = ui, server = server)
-
-
