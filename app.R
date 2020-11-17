@@ -38,7 +38,7 @@ ui <- fluidPage(
             title = "The Loan Rangers",
             description = "An interactive visualization of Tory cronyism related to the Loan Charge Scandal",
             url = "https://the-loan-rangers.shinyapps.io/the-loan-rangers/",
-            image = "https://parris.me.uk/i/lcag.jpg",
+            image = "https://the-loan-rangers.shinyapps.io/the-loan-rangers/logo.png",
             image_alt = "An image for social media cards",
             twitter_creator = "@garethparris",
             twitter_card_type = "summary",
