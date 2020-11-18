@@ -5,6 +5,6 @@ account: the-loan-rangers
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3244614
-bundleId: 3875701
+bundleId: 3875720
 url: https://the-loan-rangers.shinyapps.io/the-loan-rangers/
-when: 1605698470.00517
+when: 1605699072.21521
