@@ -69,11 +69,16 @@ save(connections, file = "connections.RData")
 # make graph
 visNetwork(nodes=people, edges=connections, width = "100%") %>% 
   visEdges(scaling=list(min=4, max=40)) %>%
-  visNodes(scaling=list(min=40, max=50)) %>%
-  visOptions(highlightNearest = list(enabled = T, degree = 2, hover = T)) %>%
-  visInteraction(hover=TRUE, zoomView = TRUE) %>%
-  visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -50)) %>%
+  visNodes(scaling=list(min=30)) %>%
+  visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T)) %>%
+  visInteraction(hover=TRUE, zoomView = TRUE,
+                 multiselect=TRUE,
+                 navigationButtons = FALSE,
+                 tooltipStyle = 'position: fixed;visibility:hidden;padding: 5px;
+                font-family: sans-serif;font-size:14px;font-color:#000000;background-color: #e3fafa;
+                -moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
+                 border: 0px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                 max-width:200px;overflow-wrap: normal') %>%
+  visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -80)) %>%
   addFontAwesome() %>%
-visLayout(randomSeed = 12) # to have always the same network  
-
-
+  visLayout(randomSeed = 02143) %>% visSave("temp.html")

@@ -1,12 +1,10 @@
-FROM rocker/shiny-verse
+FROM rocker/shiny-verse:latest
 
-#update all packages
-RUN apt-get update
-
-#upgrade
-RUN apt-get upgrade -y
+RUN apt-get update && apt-get install -y
 
 #install packaes needed for running the app
-RUN R -e "install.packages(c('visNetwork', 'tidyverse', 'metathis'))"
+RUN R -e "install.packages(c('shiny', 'visNetwork', 'tidyverse', 'metathis'))"
 
-COPY ./ /srv/shiny-server/
+COPY ./App /srv/shiny-server
+
+RUN sudo chown -R shiny:shiny /srv/shiny-server 

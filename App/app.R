@@ -3,7 +3,6 @@ library(visNetwork)
 library(tidyverse)
 library(metathis)
 
-
 server <- function(input, output) {
     output$network <- renderVisNetwork({
         load("people.RData")
@@ -36,9 +35,9 @@ ui <- fluidPage(
     meta() %>%
         meta_social(
             title = "The Loan Rangers",
-            description = "An interactive visualization of Tory cronyism related to the Loan Charge Scandal",
-            url = "https://the-loan-rangers.shinyapps.io/the-loan-rangers/",
-            image = "https://the-loan-rangers.shinyapps.io/the-loan-rangers/logo.png",
+            description = "An interactive visualization of cronyism related to the Loan Charge Scandal",
+            url = "http://loanrangers.info",
+            image = "https://parris.me.uk/i/loanrangers.png",
             image_alt = "An image for social media cards",
             twitter_creator = "@garethparris",
             twitter_card_type = "summary",
@@ -46,7 +45,7 @@ ui <- fluidPage(
         ),
     
     titlePanel("The Loan Rangers"),
-    verticalLayout(p("A visualisation of the connections between", strong("Tory politicians, companies and people related to the Loan Charge Scandal."),
+    verticalLayout(p("A visualisation of the connections between", strong("Politicians, companies and people related to the Loan Charge Scandal."),
                    style = "font-size:20px;")),
     sidebarLayout(
         sidebarPanel(
@@ -78,7 +77,7 @@ ui <- fluidPage(
         mainPanel(
         visNetworkOutput("network", height="80vh", width="100%"), width=9
     )
-)
+  )
 )
 
 shinyApp(ui = ui, server = server)
