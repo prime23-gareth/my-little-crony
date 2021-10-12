@@ -22,9 +22,13 @@ The file `app.R` contains the Shiny app. It can be run locally on your machine o
     )
 ### In the my-little-crony directory run (first time):
     $ R 
+    > install.packages("rsconnect")
     > install.packages("visNetwork")
     > install.packages("tidyverse")
     > install.packages("metathis")
+    > install.packages("igraph")
     > install.packages("shiny")
+### Set the connection info
+    rsconnect::setAccountInfo(name='the-loan-rangers', token='<TOKEN>', secret='<SECRET>')
 ### Run the app:
     R -e "shiny::runApp('.')"
