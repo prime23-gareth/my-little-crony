@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   R-container:
-    container_name: loanrangers_container
-    image: loanrangers
+    container_name: loanrangers
+    image: theloanrangers
     ports:
         - "3838:3838"
