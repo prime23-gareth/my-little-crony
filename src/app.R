@@ -8,7 +8,6 @@ server <- function(input, output) {
         load("people.RData")
         load("connections.RData")
         
-
         visNetwork(people, connections, width = "160%", height = "150%") %>%
             visEdges(scaling=list(min=8, max=40)) %>%
             visNodes(scaling=list(min=100, max=100)) %>%

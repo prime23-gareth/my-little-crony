@@ -1,10 +1,20 @@
 FROM rocker/shiny-verse:latest
 
-RUN apt-get update && apt-get install -y
+# Used for healthchecks
+RUN apt-get update && apt-get install -y curl
 
-#install packaes needed for running the app
-RUN R -e "install.packages(c('shiny', 'visNetwork', 'tidyverse', 'metathis'))"
+RUN rm -r /srv/shiny-server/*
+COPY . /srv/shiny-server/
+RUN chown -R shiny:shiny /srv/shiny-server
 
-COPY ./App /srv/shiny-server
+RUN R -e "install.packages('visNetwork', 'tidyverse', 'metathis', 'igraph', 'shiny')"
 
-RUN sudo chown -R shiny:shiny /srv/shiny-server 
+USER shiny
+
+COPY ./src/app.R /app.R
+COPY ./src/*.RData /.
+COPY ./src/*.html /.
+
+EXPOSE 3838
+
+CMD R -e 'shiny::runApp("app.R", port = 3838, host = "0.0.0.0")'
