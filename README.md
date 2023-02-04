@@ -13,6 +13,12 @@ The script `code.R` adds some attributes to the data to aid visualization, like 
 ## Shiny app
 The file `app.R` contains the Shiny app. It can be run locally on your machine or you can see the final product [here on the web](http://loanrangers.info)!
 
+## Saving the Docker image locally
+docker save theloanrangers:latest | gzip > tlr_latest.tar.gz
+
+## Loading the Docker image
+gunzip -c tlr_latest.tar.gz | docker load
+
 ## Newbie
 ### Install R from https://cran.r-project.org/
 ### Update your ~/.Rprofile with:
