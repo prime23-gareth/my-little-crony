@@ -7,11 +7,11 @@ RUN rm -r /srv/shiny-server/*
 COPY . /srv/shiny-server/
 RUN chown -R shiny:shiny /srv/shiny-server
 
-RUN R -e "install.packages('visNetwork', 'tidyverse', 'metathis', 'igraph', 'shiny')"
+RUN R -e "install.packages(c('visNetwork', 'tidyverse', 'metathis', 'igraph', 'shiny'))"
 
 USER shiny
 
-COPY ./src/app.R /app.R
+COPY ./src/app.R /.
 COPY ./src/*.RData /.
 COPY ./src/*.html /.
 
