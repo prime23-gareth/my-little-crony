@@ -18,9 +18,9 @@ The file `app.R` contains the Shiny app. It can be run locally on your machine o
 
 ## Build the Docker image locally
 `docker build -t theloanrangers:latest .`
-# for not running docker, use save:
+#### for not running docker, use save:
 `docker save theloanrangers:latest | gzip > tlr_latest.tar.gz`
-# for running or paused docker, use export:
+#### for running or paused docker, use export:
 `docker export theloanrangers:latest | gzip > tlr_latest.tar.gz`
 ## Loading the Docker image
 `gunzip -c tlr_latest.tar.gz | docker load`
