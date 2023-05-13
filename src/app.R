@@ -70,7 +70,7 @@ ui <- fluidPage(
           "Follow me on",
           a(href="https://twitter.com/garethparris", "Twitter"),
          HTML("&bull;"), 
-          "This site costs money"
+          "This site costs money",
          HTML("&bull;"), 
           "Support me here",
           a(href="https://ko-fi.com/garethparris", "Ko-Fi"),          
