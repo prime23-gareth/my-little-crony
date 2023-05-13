@@ -1,6 +1,13 @@
 version: "3.9"
 services:
 
+  loanrangers:
+    container_name: loanrangers
+    image: theloanrangers
+    restart: unless-stopped
+    ports:
+      - "3838:3838"
+
   nginx:
     container_name: nginx
     image: nginx:latest
@@ -13,17 +20,10 @@ services:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
 
-  loanrangers:
-    container_name: loanrangers
-    image: theloanrangers
-    restart: unless-stopped
-    ports:
-      - "3838:3838"
-
   certbot:
     image: certbot/certbot
     container_name: certbot
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot --agree-tos --email <EMAIL_ADDRESS> -d loanrangers.info -d www.loanrangers.info
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email info@prime23.co -d loanrangers.info -d www.loanrangers.info --agree-tos

@@ -16,14 +16,17 @@ The script `code.R` adds some attributes to the data to aid visualization, like 
 ## Shiny app
 The file `app.R` contains the Shiny app. It can be run locally on your machine or you can see the final product [here on the web](https://loanrangers.info)!
 
-## Saving the Docker image locally
-docker save theloanrangers:latest | gzip > tlr_latest.tar.gz
-
+## Build the Docker image locally
+`docker build -t theloanrangers:latest .`
+# for not running docker, use save:
+`docker save theloanrangers:latest | gzip > tlr_latest.tar.gz`
+# for running or paused docker, use export:
+`docker export theloanrangers:latest | gzip > tlr_latest.tar.gz`
 ## Loading the Docker image
-gunzip -c tlr_latest.tar.gz | docker load
+`gunzip -c tlr_latest.tar.gz | docker load`
 
 ## Certificate initialisation
-- Rename `nginx.conf.cert-init` to `nginx.conf`
+- Rename `nginx.conf.1` to `nginx.conf`
 - Run `docker-compose up -d certbot`
 - Revert `nginx.conf` back
 

@@ -9,18 +9,18 @@ server <- function(input, output) {
         load("connections.RData")
         
         visNetwork(people, connections, width = "160%", height = "150%") %>%
-            visEdges(scaling=list(min=8, max=40)) %>%
-            visNodes(scaling=list(min=100, max=100)) %>%
-            visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
-                       nodesIdSelection=TRUE) %>%
-            visInteraction(hover=TRUE, zoomView = TRUE, 
-                           navigationButtons = TRUE,
-                           tooltipStyle = 'position: fixed;visibility:hidden;padding: 5px;
+        visEdges(scaling=list(min=8, max=40)) %>%
+        visNodes(scaling=list(min=100, max=100)) %>%
+        visOptions(highlightNearest = list(enabled = T, degree = 1, hover = T),
+                      nodesIdSelection=TRUE) %>%
+        visInteraction(hover=TRUE, zoomView = TRUE, 
+                      navigationButtons = TRUE,
+                      tooltipStyle = 'position: fixed;visibility:hidden;padding: 5px;
                 font-family: sans-serif;font-size:14px;font-color:#000000;background-color: #e3fafa;
                 -moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
                  border: 0px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
                  max-width:200px;overflow-wrap: normal') %>%
-            visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -150)) %>%
+        visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -150)) %>%
             addFontAwesome() %>%
             visLayout(randomSeed = 02143)
     })
@@ -35,7 +35,7 @@ ui <- fluidPage(
         meta_social(
             title = "The Loan Rangers",
             description = "An interactive visualization of cronyism related to the Loan Charge Scandal",
-            url = "http://loanrangers.info",
+            url = "https://loanrangers.info",
             image = "https://parris.me.uk/i/loanrangers.png",
             image_alt = "An image for social media cards",
             twitter_creator = "@garethparris",
@@ -61,8 +61,6 @@ ui <- fluidPage(
         br(),
         p("Thicker lines indicate more valuable donations.", style = "font-size:15px;"),
         hr(),
-        p("THIS IS A WORK IN PROGRESS. You will notice many unconnected nodes. Updates will be happening frequently as we build this web.", style = "font-size:15px;"),
-        hr(),
         p("My Little Crony originally created by", a(href="https://sophie-e-hill.com/", "Sophie E. Hill"),
           HTML("&bull;"),
          "Sophie's code on", a(href="https://github.com/sophieehill/my-little-crony", "Github"),
@@ -71,6 +69,11 @@ ui <- fluidPage(
          HTML("&bull;"), 
           "Follow me on",
           a(href="https://twitter.com/garethparris", "Twitter"),
+         HTML("&bull;"), 
+          "This site costs money"
+         HTML("&bull;"), 
+          "Support me here",
+          a(href="https://ko-fi.com/garethparris", "Ko-Fi"),          
           style="font-size:15px;"), 
         width=3),
         mainPanel(
