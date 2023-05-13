@@ -14,6 +14,7 @@ USER shiny
 COPY ./src/app.R /.
 COPY ./src/*.RData /.
 COPY ./src/*.html /.
+COPY ./src/*.png /.
 
 EXPOSE 3838
 

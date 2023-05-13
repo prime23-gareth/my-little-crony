@@ -35,7 +35,7 @@ ui <- fluidPage(
         meta_social(
             title = "The Loan Rangers",
             description = "An interactive visualization of cronyism related to the Loan Charge Scandal",
-            url = "https://loanrangers.info",
+            url = "https://loanrangers.info/",
             image = "https://parris.me.uk/i/loanrangers.png",
             image_alt = "An image for social media cards",
             twitter_creator = "@garethparris",
@@ -55,7 +55,6 @@ ui <- fluidPage(
             tags$li(em("Hover"),"or ", em("tap"), "icons and connections for more info"), 
             style = "font-size:15px;"), 
         p("The lines represent:", style="font-size:15px"),
-        p(HTML("&horbar;"), "government contracts", style="color:#f77272;font-size:15px"),
         p(HTML("&horbar;"), "political donations", style="color:#76a6e8;font-size:15px"),
         p(HTML("&horbar;"), "other connections (e.g. family, employer)", style="color:grey;font-size:15px"),
         br(),
